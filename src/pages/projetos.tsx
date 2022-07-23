@@ -1,11 +1,7 @@
-import { NextPage } from "next"
+import { NextPage } from "next";
 
-const projetos: NextPage = () => {
-  return(
-    <div className="p-4">
-      resume page   
-    </div>
-  )
-}
+const projetos = () => {
+  return <div className="p-4">Projetos</div>;
+};
 
-export default projetos
+export default projetos;

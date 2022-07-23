@@ -1,6 +1,6 @@
 import { NextPage } from "next"
 
-const resumo: NextPage = () => {
+const resumo = () => {
   return(
     <div className="p-4">
       resume page   
