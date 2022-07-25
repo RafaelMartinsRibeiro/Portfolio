@@ -11,7 +11,12 @@ const NavPage: FunctionComponent<{
   return activePage !== name ? (
     <Link href={route}>
       <a>
-        <span onClick={() => setActivePage(name)}>{name}</span>
+        <span
+          onClick={() => setActivePage(name)}
+          className="hover:text-purple-600"
+        >
+          {name}
+        </span>
       </a>
     </Link>
   ) : null;
@@ -33,10 +38,12 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <div>
-      <span className="font-bold text-purple-600">{activePage}</span>
+    <div className="flex justify-between px-5 py-3 my-3">
+      <span className="text-xl font-bold text-purple-600 border-b-4 border-purple-600 md:text-2xl">
+        {activePage}
+      </span>
 
-      <div className="flex space-x-3 font-bold text-red-500">
+      <div className="flex space-x-5 text-lg font-bold">
         <NavPage
           activePage={activePage}
           setActivePage={setActivePage}
