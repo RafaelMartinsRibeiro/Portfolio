@@ -38,7 +38,10 @@ const Sidebar = () => {
         </a>
       </div>
 
-      <div className="my-5 py-4 bg-gray-200 ml-[-1rem] mr-[-1rem]">
+      <div
+        className="my-5 py-4 bg-gray-200 "
+        style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
+      >
         <div className="flex items-center justify-center space-x-2">
           <GoLocation />
           <span>Paraná,Brasil</span>

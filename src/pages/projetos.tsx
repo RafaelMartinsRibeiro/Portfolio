@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+
 
 const projetos = () => {
   return <div className="p-4">Projetos</div>;

@@ -10,27 +10,27 @@ import { IServices } from "./type";
 
 export const services: IServices[] = [
   {
-    icon: RiCactusLine,
+    Icon: RiCactusLine,
     title: "Resiliência",
   },
   {
-    icon: RiWechatLine,
+    Icon: RiWechatLine,
     title: "Comunicação",
   },
   {
-    icon: RiTeamLine,
+    Icon: RiTeamLine,
     title: "Trabalho em equipe",
   },
   {
-    icon: RiLightbulbFill,
+    Icon: RiLightbulbFill,
     title: "Criatividade",
   },
   {
-    icon: RiMentalHealthLine,
+    Icon: RiMentalHealthLine,
     title: "Inteligência emocional",
   },
   {
-    icon: RiToolsFill,
+    Icon: RiToolsFill,
     title: "Adaptação",
   },
 ];
