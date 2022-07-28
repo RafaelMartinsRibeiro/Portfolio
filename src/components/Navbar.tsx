@@ -10,10 +10,10 @@ const NavPage: FunctionComponent<{
 }> = ({ activePage, setActivePage, name, route }) => {
   return activePage !== name ? (
     <Link href={route}>
-      <a>
+      <a className="leading-8 group">
         <span
           onClick={() => setActivePage(name)}
-          className="hover:text-purple-600"
+          className="transition-colors duration-200 group-hover:text-purple-600 "
         >
           {name}
         </span>

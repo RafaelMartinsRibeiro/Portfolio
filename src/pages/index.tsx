@@ -4,26 +4,32 @@ import ServiceCard from "../components/ServiceCard";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col px-6 pt-1">
-      <h5 className="my-3 font-medium">
-        Entusiasta na área de tecnologia da informação, especialmente
-        desenvolvimento. Sou apaixonado por tecnologia desde muito cedo, e estou
-        constantemente aprimorando meus conhecimentos com a finalidade de me
-        tornar um profissional melhor. Meu principal objetivo é conseguir uma
-        oportunidade profissional para iniciar minha carreira no mundo de
-        desenvolvimento web.
-      </h5>
+    <div className="flex flex-col flex-grow px-6 pt-1 ">
+      <div className="flex flex-col font-medium gap-7">
+        <span>
+          Entusiasta na área de tecnologia da informação, especialmente
+          desenvolvimento. Sou apaixonado por tecnologia desde muito cedo, e
+          estou constantemente aprimorando meus conhecimentos com a finalidade
+          de me tornar um profissional melhor.
+        </span>
+
+        <div className="flex flex-col">
+          <span className="font-bold">Objetivo:</span>
+          Meu principal objetivo é conseguir uma oportunidade profissional para
+          iniciar minha carreira no mundo de desenvolvimento web.
+        </div>
+      </div>
 
       <div
-        className="p-4 mt-5 bg-gray-400"
+        className="flex-grow p-4 mt-5 "
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
-        <h6 className="my-3 font-bold text-xl tracking-wide">Soft skills</h6>
-        <div className="grid lg:grid-cols-2 gap-6">
+        <h6 className="my-3 text-xl font-bold tracking-wide">Soft skills</h6>
+        <div className="grid gap-6 lg:grid-cols-2 ">
           {services.map((service) => (
             <div
               key={service.title}
-              className="lg:col-span-1 bg-gray-200 rounded-lg "
+              className="bg-gray-200 rounded-lg lg:col-span-1 "
             >
               <ServiceCard service={service} />
             </div>
