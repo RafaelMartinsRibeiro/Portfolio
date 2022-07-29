@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { services } from "../../../data";
+import { softSkills } from "../../../data";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json({ services });
+  res.status(200).json({ softSkills });
 };

@@ -13,7 +13,7 @@ const NavPage: FunctionComponent<{
       <a className="leading-8 group">
         <span
           onClick={() => setActivePage(name)}
-          className="transition-colors duration-200 group-hover:text-purple-600 "
+          className="transition-all duration-200 group-hover:text-purple-600 group-hover:text-xl"
         >
           {name}
         </span>

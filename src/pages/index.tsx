@@ -1,6 +1,6 @@
-import type { GetStaticPropsContext, NextPage } from "next";
-import { services } from "../../data";
-import ServiceCard from "../components/ServiceCard";
+import type { NextPage } from "next";
+import { softSkills } from "../../data";
+import SoftSkillCard from "../components/SoftSkillCard";
 
 const Home: NextPage = () => {
   return (
@@ -26,12 +26,12 @@ const Home: NextPage = () => {
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">Soft skills</h6>
         <div className="grid gap-6 lg:grid-cols-2 ">
-          {services.map((service) => (
+          {softSkills.map((softSkill) => (
             <div
-              key={service.title}
+              key={softSkill.title}
               className="bg-gray-200 rounded-lg lg:col-span-1 "
             >
-              <ServiceCard service={service} />
+              <SoftSkillCard softSkill={softSkill} />
             </div>
           ))}
         </div>

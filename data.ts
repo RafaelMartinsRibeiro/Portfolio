@@ -46,12 +46,12 @@ export const skills: ISkill[] = [
   },
   {
     name: "Next.js",
-    level: "70%",
+    level: "60%",
     Icon: BsCircleFill,
   },
   {
     name: "TypeScript",
-    level: "70%",
+    level: "50%",
     Icon: BsCircleFill,
   },
   {
@@ -61,22 +61,22 @@ export const skills: ISkill[] = [
   },
   {
     name: "TailwindCSS",
-    level: "70%",
+    level: "80%",
     Icon: BsCircleFill,
   },
   {
     name: "SaSS",
-    level: "70%",
+    level: "80%",
     Icon: BsCircleFill,
   },
   {
     name: "CSS",
-    level: "70%",
+    level: "85%",
     Icon: BsCircleFill,
   },
   {
     name: "HTML",
-    level: "70%",
+    level: "85%",
     Icon: BsCircleFill,
   },
 ];
@@ -84,17 +84,17 @@ export const skills: ISkill[] = [
 export const tools: ISkill[] = [
   {
     name: "Git",
-    level: "70%",
+    level: "65%",
     Icon: BsCircleFill,
   },
   {
     name: "Photoshop",
-    level: "70%",
+    level: "50%",
     Icon: BsCircleFill,
   },
   {
     name: "VS Code",
-    level: "70%",
+    level: "90%",
     Icon: BsCircleFill,
   },
 ];

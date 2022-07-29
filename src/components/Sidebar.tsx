@@ -30,11 +30,11 @@ const Sidebar = () => {
 
       <div className="flex items-center justify-center w-9/12 gap-10 mx-auto my-5 text-purple-500 md:w-full">
         <a href="https://github.com/RafaelMartinsRibeiro">
-          <AiFillGithub className="w-8 h-8" />
+          <AiFillGithub className="w-8 h-8 transition-all duration-300 hover:w-10 hover:h-10" />
         </a>
 
         <a href="https://www.linkedin.com/in/rafael-martins-ribeiro/">
-          <AiFillLinkedin className="w-8 h-8" />
+          <AiFillLinkedin className="w-8 h-8 transition-all duration-300 hover:w-10 hover:h-10" />
         </a>
       </div>
 
