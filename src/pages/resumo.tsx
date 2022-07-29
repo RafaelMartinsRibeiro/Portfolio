@@ -30,7 +30,27 @@ const resumo = () => {
         </div>
       </div>
 
-     
+      <div className="grid gap-6 md:grid-cols-2">
+        <div>
+          <h5 className="my-3 text-2xl font-bold">
+            Linguagens &amp; Frameworks
+          </h5>
+          <div className="my-2">
+            {skills.map((skill) => (
+              <Bar data={skill} key={skill.name} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h5 className="my-3 text-2xl font-bold">Ferramentas</h5>
+          <div className="my-2">
+            {tools.map((tool) => (
+              <Bar data={tool} key={tool.name} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
