@@ -69,31 +69,31 @@ const Sidebar = () => {
       >
         Mande um Email
       </button>
-      <button onClick={changeTheme} className="w-5/12  rounded-full">
-        <Switch.Group>
-          <div className="flex items-center justify-center">
-            <Switch
-              checked={enabled}
-              onChange={setEnabled}
-              className={` ${
+
+      <Switch.Group>
+        <div className="flex items-center justify-center">
+          <Switch
+            onClick={changeTheme}
+            checked={enabled}
+            onChange={setEnabled}
+            className={` ${
+              enabled
+                ? "bg-gradient-to-r from-purple-600 to-blue-500"
+                : "bg-gray-300"
+            } relative inline-flex w-5/12 py-1 items-center rounded-full transition-all duration-300 focus:outline-none`}
+          >
+            <span
+              className={` text-purple-600 flex justify-center items-center ${
                 enabled
-                  ? "bg-gradient-to-r from-purple-600 to-blue-500"
-                  : "bg-gray-300"
-              } relative inline-flex w-full py-1 items-center rounded-full transition-all focus:outline-none`}
+                  ? "translate-x-14 bg-dark-200"
+                  : "translate-x-1 bg-white"
+              } inline-block h-8 w-12 transform rounded-full transition-transform`}
             >
-              <span
-                className={` text-purple-600 flex justify-center items-center ${
-                  enabled
-                    ? "translate-x-14 bg-dark-200"
-                    : "translate-x-1 bg-white"
-                } inline-block h-8 w-12 transform rounded-full transition-transform`}
-              >
-                {theme === "light" ? <IoSunnySharp /> : <IoMoonSharp />}
-              </span>
-            </Switch>
-          </div>
-        </Switch.Group>
-      </button>
+              {theme === "light" ? <IoSunnySharp /> : <IoMoonSharp />}
+            </span>
+          </Switch>
+        </div>
+      </Switch.Group>
     </div>
   );
 };
