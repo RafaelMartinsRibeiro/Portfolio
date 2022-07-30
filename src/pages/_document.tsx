@@ -16,7 +16,7 @@ const Document = () => {
         />
       </Head>
 
-      <body className="bg-gradient-to-r from-purple-600 to-blue-500">
+      <body className="bg-gradient-to-r from-purple-600 to-blue-500 dark:from-dark-200 dark:to-dark-700 dark:text-white">
         <Main />
         <NextScript />
       </body>

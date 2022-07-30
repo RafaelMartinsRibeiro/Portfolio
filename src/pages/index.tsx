@@ -21,15 +21,15 @@ const Home: NextPage = () => {
       </div>
 
       <div
-        className="flex-grow p-4 mt-5 "
+        className="flex-grow p-4 mt-5 dark:bg-dark-100"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">Soft skills</h6>
-        <div className="grid gap-6 lg:grid-cols-2 ">
+        <div className="grid gap-6 lg:grid-cols-2">
           {softSkills.map((softSkill) => (
             <div
               key={softSkill.title}
-              className="bg-gray-200 rounded-lg lg:col-span-1 "
+              className="bg-gray-200 rounded-lg lg:col-span-1 dark:bg-dark-200"
             >
               <SoftSkillCard softSkill={softSkill} />
             </div>

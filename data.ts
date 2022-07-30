@@ -51,7 +51,7 @@ export const skills: ISkill[] = [
   },
   {
     name: "TypeScript",
-    level: "50%",
+    level: "60%",
     Icon: BsCircleFill,
   },
   {
@@ -65,7 +65,7 @@ export const skills: ISkill[] = [
     Icon: BsCircleFill,
   },
   {
-    name: "SaSS",
+    name: "Sass",
     level: "80%",
     Icon: BsCircleFill,
   },
