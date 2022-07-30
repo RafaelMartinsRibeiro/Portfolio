@@ -1,9 +1,21 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
+import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
+
+import { useTheme } from "next-themes";
+import { Switch } from "@headlessui/react";
+import { useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
 const Sidebar = () => {
+  const { theme, setTheme } = useTheme();
+  const [enabled, setEnabled] = useState(false);
+
+  const changeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <div>
       <img
@@ -16,14 +28,14 @@ const Sidebar = () => {
         Martins
       </h3>
 
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full">
+      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200">
         Desenvolvedor Front-end
       </p>
 
       <a
         href="assets/RafaelMartins-Curriculo.pdf"
         download="RafaelMartins-Curriculo"
-        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full"
+        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
       >
         <GiTie className="w-6 h-6" /> Currículo
       </a>
@@ -39,7 +51,7 @@ const Sidebar = () => {
       </div>
 
       <div
-        className="py-4 my-5 bg-gray-200 "
+        className="py-4 my-5 bg-gray-200 dark:bg-dark-200"
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <div className="flex items-center justify-center space-x-2">
@@ -57,8 +69,30 @@ const Sidebar = () => {
       >
         Mande um Email
       </button>
-      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-500">
-        Mudar tema
+      <button onClick={changeTheme} className="w-5/12  rounded-full">
+        <Switch.Group>
+          <div className="flex items-center justify-center">
+            <Switch
+              checked={enabled}
+              onChange={setEnabled}
+              className={` ${
+                enabled
+                  ? "bg-gradient-to-r from-purple-600 to-blue-500"
+                  : "bg-gray-300"
+              } relative inline-flex w-full py-1 items-center rounded-full transition-all focus:outline-none`}
+            >
+              <span
+                className={` text-purple-600 flex justify-center items-center ${
+                  enabled
+                    ? "translate-x-14 bg-dark-200"
+                    : "translate-x-1 bg-white"
+                } inline-block h-8 w-12 transform rounded-full transition-transform`}
+              >
+                {theme === "light" ? <IoSunnySharp /> : <IoMoonSharp />}
+              </span>
+            </Switch>
+          </div>
+        </Switch.Group>
       </button>
     </div>
   );
