@@ -5,12 +5,20 @@ import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
 
 import { useTheme } from "next-themes";
 import { Switch } from "@headlessui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
   const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    localStorage.getItem("theme") === null
+      ? localStorage.setItem("theme", "light")
+      : setTheme(localStorage.getItem("theme"));
+
+    theme === "dark" ? setEnabled(true) : setEnabled(false);
+  }, [setTheme, theme]);
 
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -89,7 +97,7 @@ const Sidebar = () => {
                   : "translate-x-1 bg-white"
               } inline-block h-8 w-12 transform rounded-full transition-transform`}
             >
-              {theme === "dark" ? <IoMoonSharp /> : <IoSunnySharp />}
+              {enabled === true ? <IoMoonSharp /> : <IoSunnySharp />}
             </span>
           </Switch>
         </div>
