@@ -89,7 +89,7 @@ const Sidebar = () => {
                   : "translate-x-1 bg-white"
               } inline-block h-8 w-12 transform rounded-full transition-transform`}
             >
-              {theme === "light" ? <IoSunnySharp /> : <IoMoonSharp />}
+              {theme === "dark" ? <IoMoonSharp /> : <IoSunnySharp />}
             </span>
           </Switch>
         </div>
