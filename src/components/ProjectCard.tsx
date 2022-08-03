@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { FunctionComponent, useState } from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
@@ -21,18 +22,30 @@ const ProjectCard: FunctionComponent<{
 
   return (
     <div>
-      <img
+      <Image
         src={imagePath}
         alt={name}
         onClick={() => setIsShowDetail(true)}
         className="cursor-pointer"
+        width="300"
+        height="150"
+        layout="responsive"
+        quality="100"
       />
+
       <p className="my-2 text-center">{name}</p>
 
       {isShowDetail && (
         <div className="grid md:grid-cols-2 absolute top-0 left-0 z-10 h-auto w-full gap-x-12 bg-gray-100 dark:text-white dark:bg-dark-100 p-2 ">
           <div>
-            <img src={imagePath} alt={name} />
+            <Image
+              src={imagePath}
+              alt={name}
+              width="300"
+              height="150"
+              layout="responsive"
+              quality="100"
+            />
 
             <div className="flex justify-center my-4 space-x-3">
               <a

@@ -6,6 +6,7 @@ import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
 import { useTheme } from "next-themes";
 import { Switch } from "@headlessui/react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 /* eslint-disable @next/next/no-img-element */
 const Sidebar = () => {
@@ -26,11 +27,16 @@ const Sidebar = () => {
 
   return (
     <div>
-      <img
-        className="w-32 h-32 mx-auto rounded-full"
+      <Image
         src="https://avatars.githubusercontent.com/u/102157214?v=4"
         alt="User avatar"
+        width="128"
+        height="128"
+        layout="intrinsic"
+        className="mx-auto rounded-full"
+        quality="100"
       />
+
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-purple-600">Rafael </span>
         Martins
