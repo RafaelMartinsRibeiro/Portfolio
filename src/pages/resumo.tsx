@@ -1,7 +1,7 @@
 import { skills, tools } from "../../data";
 import Bar from "../components/Bar";
 
-const resumo = () => {
+const Resumo = () => {
   return (
     <div className="px-6 pt-1">
       <div className="grid gap-6 md:grid-cols-2 ">
@@ -55,4 +55,4 @@ const resumo = () => {
   );
 };
 
-export default resumo;
+export default Resumo;
