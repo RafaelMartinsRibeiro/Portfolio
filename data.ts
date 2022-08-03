@@ -107,7 +107,7 @@ export const projects: IProject[] = [
     imagePath: "/images/feedget.png",
     deployedUrl: "https://feedget-2lnvobk5d-rafaelmartinsribeiro.vercel.app/",
     githubUrl: "https://github.com/RafaelMartinsRibeiro/FeedGet",
-    category: ["react"],
+    category: ["React"],
     techs: ["React", "TypeScript", "TailwindCSS", "Vite"],
   },
   {
@@ -117,7 +117,7 @@ export const projects: IProject[] = [
     imagePath: "/images/moveit.png",
     deployedUrl: "https://moveit-gamma-seven.vercel.app/",
     githubUrl: "https://github.com/RafaelMartinsRibeiro/MoveIt",
-    category: ["next"],
+    category: ["NextJS"],
     techs: ["NextJS", "TypeScript", "js-cookie"],
   },
   {
@@ -127,7 +127,7 @@ export const projects: IProject[] = [
     imagePath: "/images/wforte.png",
     deployedUrl: "https://w-forte.vercel.app/",
     githubUrl: "https://github.com/RafaelMartinsRibeiro/W-Forte",
-    category: ["next"],
+    category: ["NextJS"],
     techs: [
       "NextJS",
       "TypeScript",
@@ -143,7 +143,7 @@ export const projects: IProject[] = [
     imagePath: "/images/letmeask.png",
     deployedUrl: "https://letmeask-93071.web.app/",
     githubUrl: "https://github.com/RafaelMartinsRibeiro/LetMeAsk",
-    category: ["react"],
+    category: ["React"],
     techs: [
       "React",
       "TypeScript",

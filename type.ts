@@ -21,4 +21,4 @@ export interface IProject {
   techs: string[];
 }
 
-export type Category = "react"|"next"|"javascript"
+export type Category = "React" | "NextJS" | "JavaScript";
