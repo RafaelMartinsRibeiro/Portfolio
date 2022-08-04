@@ -1,10 +1,24 @@
 import { skills, tools } from "../../data";
 import Bar from "../components/Bar";
 
+import { motion } from "framer-motion";
+import { fadeInUp, routerFadeIn } from "../../animations";
+
 const Resumo = () => {
   return (
-    <div className="px-6 pt-1">
-      <div className="grid gap-6 md:grid-cols-2 ">
+    <motion.div
+      className="px-6 pt-1"
+      variants={routerFadeIn}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
+      <motion.div
+        variants={fadeInUp}
+        initial="initial"
+        animate="animate"
+        className="grid gap-6 md:grid-cols-2 "
+      >
         <div>
           <h5 className="mb-3 text-3xl font-bold">Formação</h5>
           <div>
@@ -28,7 +42,7 @@ const Resumo = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
@@ -51,7 +65,7 @@ const Resumo = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
