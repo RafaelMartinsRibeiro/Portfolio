@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import { softSkills } from "../../data";
 import SoftSkillCard from "../components/SoftSkillCard";
+import { motion } from "framer-motion";
+import { fadeInUp, routerFadeIn, stagger } from "../../animations";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
+    <motion.div className="flex flex-col flex-grow px-6 pt-1" variants={routerFadeIn} initial="initial" animate="animate" exit="exit">
       <div className="flex flex-col font-medium gap-7">
         <span>
           Entusiasta na área de tecnologia da informação, especialmente
@@ -24,19 +26,26 @@ const Home: NextPage = () => {
         className="flex-grow p-4 mt-5 dark:bg-dark-100"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
-        <h6 className="my-3 text-xl font-bold tracking-wide">Soft skills</h6>
-        <div className="grid gap-6 lg:grid-cols-2">
+        <h4 className="my-3 text-xl font-bold tracking-wide">Soft skills</h4>
+
+        <motion.div
+          className="grid gap-6 lg:grid-cols-2"
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+        >
           {softSkills.map((softSkill) => (
-            <div
+            <motion.div
+              variants={fadeInUp}
               key={softSkill.title}
               className="bg-gray-200 rounded-lg lg:col-span-1 dark:bg-dark-200"
             >
               <SoftSkillCard softSkill={softSkill} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
