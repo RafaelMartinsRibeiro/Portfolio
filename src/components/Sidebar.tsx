@@ -94,7 +94,8 @@ const Sidebar = () => {
               enabled
                 ? "bg-gradient-to-r from-purple-600 to-blue-500"
                 : "bg-gray-300"
-            } relative inline-flex w-5/12 py-1 items-center rounded-full transition-all duration-300 focus:outline-none`}
+            } relative inline-flex py-1 items-center rounded-full transition-all duration-300 focus:outline-none`}
+            style={{ width: "6.75rem" }}
           >
             <span
               className={` text-purple-600 flex justify-center items-center ${

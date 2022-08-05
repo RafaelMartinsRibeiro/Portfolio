@@ -12,3 +12,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right bottom, #9333ea, #3b82f6);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  heigth: 0px;
+}
