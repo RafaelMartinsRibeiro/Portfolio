@@ -9,17 +9,19 @@ import { fadeInUp, stagger } from "../../animations";
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
+  showDetail: number | null;
+  setShowDetail: (id: number | null) => void;
 }> = ({
-  project: { name, imagePath, description, deployedUrl, githubUrl, techs },
+  project: { name, imagePath, description, deployedUrl, githubUrl, techs, id },
+  showDetail,
+  setShowDetail,
 }) => {
-  const [isShowDetail, setIsShowDetail] = useState(false);
-
   return (
     <div>
       <Image
         src={imagePath}
         alt={name}
-        onClick={() => setIsShowDetail(true)}
+        onClick={() => setShowDetail(id)}
         className="cursor-pointer"
         width="300"
         height="150"
@@ -29,7 +31,7 @@ const ProjectCard: FunctionComponent<{
 
       <p className="my-2 text-center">{name}</p>
 
-      {isShowDetail && (
+      {showDetail === id && (
         <div className="rounded-lg py-8 grid md:grid-cols-2 absolute top-0 left-0 z-10 h-auto w-full gap-x-12 bg-gray-100 dark:text-white dark:bg-dark-100">
           <motion.div
             className="m-auto"
@@ -106,7 +108,7 @@ const ProjectCard: FunctionComponent<{
           <button>
             <MdClose
               size={30}
-              onClick={() => setIsShowDetail(false)}
+              onClick={() => setShowDetail(null)}
               className="absolute top-3 right-3 rounded-full p-1 focus:outline-none bg-gray-200 dark:bg-dark-200"
             />
           </button>

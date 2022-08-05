@@ -9,6 +9,7 @@ import { fadeInUp, routerFadeIn, stagger } from "../../animations";
 const Projetos = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("All");
+  const [showDetail, setShowDetail] = useState<number | null>(null);
 
   const handlerFilterCategory = (category: "All" | Category) => {
     if (category === "All") {
@@ -54,7 +55,11 @@ const Projetos = () => {
               className="col-span-12 sm:col-span-4 lg:col-span-3 p-2 bg-gray-200 dark:bg-dark-200 rounded-lg"
               key={project.name}
             >
-              <ProjectCard project={project} />
+              <ProjectCard
+                project={project}
+                showDetail={showDetail}
+                setShowDetail={setShowDetail}
+              />
             </motion.div>
           );
         })}
