@@ -1,12 +1,28 @@
-import type { NextPage } from "next";
+import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  NextPage,
+} from "next";
 import { softSkills } from "../../data";
 import SoftSkillCard from "../components/SoftSkillCard";
 import { motion } from "framer-motion";
 import { fadeInUp, routerFadeIn, stagger } from "../../animations";
 
-const Home: NextPage = () => {
+interface Props {
+  endpoint: string;
+}
+
+const Home: NextPage<Props> = ({ endpoint }) => {
+  console.log(endpoint);
+
   return (
-    <motion.div className="flex flex-col flex-grow px-6 pt-1" variants={routerFadeIn} initial="initial" animate="animate" exit="exit">
+    <motion.div
+      className="flex flex-col flex-grow px-6 pt-1"
+      variants={routerFadeIn}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="flex flex-col font-medium gap-7">
         <span>
           Entusiasta na área de tecnologia da informação, especialmente
@@ -51,30 +67,16 @@ const Home: NextPage = () => {
 
 export default Home;
 
-// // export const getServerSideProps = async (
-// //   context: GetServerSidePropsContext
-// // ) => {
-// //   const res = await fetch("http://localhost:3000/api/services");
-// //   const data = await res.json();
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  // const res = await fetch(`${process.env.VERCEL_URL}/api/softSkills`);
+  // const data = await res.json();
+  // console.log(data);
 
-// //   console.log("SERVER", services);
-
-// //   return {
-// //     props: {
-// //       services: data.services,
-// //     },
-// //   };
-// // };
-
-// export const getStaticProps = async (context: GetStaticPropsContext) => {
-//   const res = await fetch("http://localhost:3000/api/services");
-//   const data = await res.json();
-
-//   console.log("SERVER", services);
-
-//   return {
-//     props: {
-//       services: data.services,
-//     },
-//   };
-// };
+  return {
+    props: {
+      endpoint: process.env.VERCEL_URL,
+    },
+  };
+};

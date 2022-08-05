@@ -47,7 +47,7 @@ const Sidebar = () => {
       </p>
 
       <a
-        href="assets/RafaelMartins-Curriculo.pdf"
+        href="/assets/RafaelMartins-Curriculo.pdf"
         download="RafaelMartins-Curriculo"
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
       >
