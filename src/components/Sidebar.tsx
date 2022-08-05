@@ -14,9 +14,9 @@ const Sidebar = () => {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    localStorage.getItem("theme") === null
-      ? localStorage.setItem("theme", "light")
-      : setTheme(localStorage.getItem("theme"));
+    localStorage.getItem("theme") !== null
+      ? setTheme(localStorage.getItem("theme"))
+      : localStorage.setItem("theme", "light");
 
     theme === "dark" ? setEnabled(true) : setEnabled(false);
   }, [setTheme, theme]);
